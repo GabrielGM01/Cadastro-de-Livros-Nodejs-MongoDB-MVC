@@ -1,0 +1,46 @@
+<%- include('includes/head');   %>
+
+<%- include('includes/nav');%>
+  
+<div class="container">
+  <div class="row">
+
+    <div class="col-lg-2"></div>
+
+    
+    <div class="col-lg-8 my-5">
+      <h1 class="text-center my-3">Livros cadastrados</h1>
+
+      <div class="my-5 responsive-table ">
+        <table class="table ">
+          <thead>
+            <tr>
+              <th scope="col">Nome do Livro</th>
+              <th scope="col">Autor do Livro</th>
+              <th scope="col">Data de Publicação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% livros.forEach((livro)=>{ %>
+                <tr>
+                  <td><%= livro.nomeLivro %></td>
+                  <td><%= livro.autorLivro %></td>
+                  <td><%= livro.dataPublicacao %></td>
+                </tr>
+            
+            <% }); %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+
+
+    <div class="col-lg-2"></div>
+
+  </div>
+</div>
+   
+
+
+<%- include('includes/footer');   %>
